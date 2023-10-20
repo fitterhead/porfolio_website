@@ -1,0 +1,13 @@
+/* ---------------------------------- logo ---------------------------------- */
+@font-face {
+  font-family: "Romie-Italic";
+  src: url("font/RomieTrial-Regular-Italic.ttf") format("truetype");
+}
+/* ---------------------------------- body ---------------------------------- */
+@font-face {
+  font-family: "NeueMontreal-Book";
+  src: url("font/PPNeueMontreal-Book.ttf") format("truetype");
+}
+
+
+
