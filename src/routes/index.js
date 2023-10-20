@@ -12,6 +12,7 @@ import OkComputer from "../features/details/OkComputer";
 import Beyond from "../features/details/Beyond";
 import Consumerism from "../features/details/Consumerism";
 import Top100Detail from "../features/details/Top100Detail";
+import About from "../features/details/About";
 function Router() {
   return (
     <Routes>
@@ -27,6 +28,7 @@ function Router() {
         <Route path="beyond" element={<Beyond />} />
         <Route path="consumerism" element={<Consumerism />} />
         <Route path="top100" element={<Top100Detail />} />
+        <Route path="about" element={<About />} />
       </Route>
     </Routes>
   );

@@ -24,7 +24,7 @@ function FairDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding:"3rem"
+          padding: "3rem",
           // aspectRatio: "2038/1359",
         }}
       >
@@ -35,7 +35,7 @@ function FairDetail() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-          The Un-Michelin Guide to Saigon food destinations
+          Vietnam Typical Good Fair 2023 Poster{" "}
         </Typography>
         <Typography
           variant="h2"
@@ -43,15 +43,11 @@ function FairDetail() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          A series of posters I designed for the Vietnam Typical Goods Fair,
+          hosted at the Saigon Exhibition and Convention Center in August 2023.
+          Each poster is meticulously crafted to capture the essence and
+          vibrancy of this esteemed event, showcasing the very best of Vietnam's
+          unique products.
         </Typography>
       </Grid>
 

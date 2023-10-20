@@ -60,6 +60,20 @@ const TYPOGRAPHY = {
     letterSpacing: "-5",
     color: "#050203",
   },
+  /* ----------------------------------- h3 ----------------------------------- */
+  h3: {
+    fontFamily: "NeueMontreal-Book",
+    fontWeight: 400,
+    fontSize: "0.5rem", // Default font size
+    "@media (min-width:600px)": {
+      fontSize: "1rem", // Font size for screens 600px and above
+    },
+    "@media (min-width:960px)": {
+      fontSize: "1.2rem", // Font size for screens 960px and above
+    },
+    letterSpacing: "-5",
+    color: "#050203",
+  },
 
   /* ---------------------------------- logo ---------------------------------- */
   logo: {

@@ -22,7 +22,8 @@ function BombeeDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          aspectRatio: "2038/1359",
+          padding: "3rem",
+          // aspectRatio: "2038/1359",
         }}
       >
         {/* Content for the first Grid item */}
@@ -32,7 +33,15 @@ function BombeeDetail() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-          Bombee
+          Bombee Honey
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          className="responsive-heading"
+          sx={{ paddingBottom: "0.5rem" }}
+        >
+          Identity design for an upcoming Honey brand in Japan
         </Typography>
       </Grid>
       <Grid

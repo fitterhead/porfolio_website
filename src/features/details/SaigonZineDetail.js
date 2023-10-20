@@ -27,14 +27,6 @@ function SaigonZineDetail() {
         }}
       >
         {/* Content for the first Grid item */}
-        <Typography
-          variant="h1"
-          align="center"
-          className="responsive-heading"
-          sx={{ paddingBottom: "0.5rem" }}
-        >
-          Branding design for a spa in Tokyo, 2021
-        </Typography>
       </Grid>
       <Grid
         item
@@ -47,7 +39,8 @@ function SaigonZineDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          aspectRatio: "2038/1359",
+          padding: "3rem",
+          // aspectRatio: "2038/1359",
         }}
       >
         {/* Content for the first Grid item */}
@@ -58,6 +51,29 @@ function SaigonZineDetail() {
           sx={{ paddingBottom: "0.5rem" }}
         >
           The Un-Michelin Guide to Saigon food destinations
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          className="responsive-heading"
+          sx={{ paddingBottom: "0.5rem" }}
+        >
+          A zine catering to foreign visitors, exploring Saigon's culinary
+          delights through the discerning eyes of locals. Think of it as a more
+          authentic, localized version of the Michelin Guide, sparking diverse
+          opinions and conversations. I envision a modern layout using
+          contemporary fonts, yet drawing inspiration from the color schemes and
+          typography reminiscent of Vietnamese book covers from the 2000s. <br/>This
+          fusion of modernity and nostalgia will create a visually captivating
+          experience, capturing the essence of Saigon's rich culinary landscape.
+          My zine will serve as a cultural bridge, guiding international
+          travelers to hidden gems and beloved eateries cherished by the locals.
+          <br/>Through vibrant visuals and engaging narratives, I aim to transport
+          our readers into the heart of Saigon’s gastronomic journey, allowing
+          them to savor not just the flavors but also the stories behind each
+          dish. With every page, I'll unfold the city's culinary tapestry,
+          inviting readers to embark on an unforgettable culinary adventure,
+          curated by the people who know it best.
         </Typography>
       </Grid>
 

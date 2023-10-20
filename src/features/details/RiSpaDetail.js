@@ -22,7 +22,8 @@ function RiSpaDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          aspectRatio: "2038/1359",
+          padding: "3rem",
+          // aspectRatio: "2038/1359",
         }}
       >
         {/* Content for the first Grid item */}
@@ -32,7 +33,30 @@ function RiSpaDetail() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-          Ri Spa
+          Ri Beauty Spa{" "}
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          className="responsive-heading"
+          sx={{ paddingBottom: "0.5rem" }}
+        >
+          Ri Beauty Spa is a newly established Japanese beauty salon located in
+          Kawasaki City, founded by a Vietnamese immigrant entrepreneur. The
+          salon aims to provide quality services at reasonable prices, catering
+          to both Japanese consumers and working-class immigrant women. I
+          collaborated with the client during the initial naming stage,
+          conducting market research to understand the competition and identify
+          potential areas of improvement. <br />
+          One observation was the common practice among Japanese beauty salons
+          to use foreign words in their names, assuming it would attract
+          customers. However, this approach often hindered word-of-mouth
+          marketing due to pronunciation challenges. I suggested choosing a name
+          that is easy to read, remember, and pronounce, allowing effortless
+          recommendations from satisfied clients. <br />
+          This strategic approach emphasizes effective communication and aims to
+          position Ri Beauty Spa as a welcoming and accessible destination for
+          all.
         </Typography>
       </Grid>
       <Grid

@@ -29,6 +29,7 @@ function MainHeader() {
 
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/");
+  const handleAbout = () => navigate("about");
 
   return (
     <AppBar
@@ -45,7 +46,11 @@ function MainHeader() {
         }}
       >
         <Toolbar disableGutters sx={{ alignItems: "flex-start" }}>
-          <Typography onClick={() => handleProject()} variant="logo">
+          <Typography
+            sx={{ cursor: "pointer" }}
+            onClick={() => handleProject()}
+            variant="logo"
+          >
             Phi <br />
             Nguyen
           </Typography>
@@ -69,7 +74,13 @@ function MainHeader() {
               padding="0rem"
             > */}
             {/* <MenuIcon /> */}
-            <Typography variant="menu">About</Typography>
+            <Typography
+              sx={{ cursor: "pointer" }}
+              onClick={() => handleAbout()}
+              variant="menu"
+            >
+              About
+            </Typography>
             {/* </IconButton> */}
             {/* <Menu
               id="menu-appbar"

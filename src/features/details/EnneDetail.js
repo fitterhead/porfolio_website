@@ -22,7 +22,8 @@ function EnneDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          aspectRatio: "2038/1359",
+          padding: "3rem",
+          // aspectRatio: "2038/1359",
         }}
       >
         {/* Content for the first Grid item */}
@@ -33,6 +34,34 @@ function EnneDetail() {
           sx={{ paddingBottom: "0.5rem" }}
         >
           Enne Homestay
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          className="responsive-heading"
+          sx={{ paddingBottom: "0.5rem" }}
+        >
+          "én.nè" encapsulates the unique identity of my guest house nestled in
+          the heart of Da Lat, Vietnam. Drawing inspiration from the profound
+          Japanese concept of Ma (間), which explores the art of negative space,
+          my logo embodies simplicity and harmony. <br />
+          The name "én.nè" carries a delightful wordplay, bearing dual meanings
+          in Vietnamese. Translated, it whimsically signifies "swallow is here,"
+          paying homage to the graceful bird's presence. Additionally, it
+          seamlessly transforms into "Enne" in English, blending cultures within
+          the very essence of my identity.
+          <br /> My logo is meticulously crafted, with the accents "`" artfully
+          stylized into the shape of a branch. This elegant detail mirrors the
+          enchanting natural surroundings of my guest house, perched atop a hill
+          in Da Lat. Surrounded by verdant forests, my space offers a tranquil
+          retreat, where guests can immerse themselves in nature's embrace and
+          find solace in the serene ambiance. <br />
+          At "én.nè," I embrace the beauty of simplicity, weaving together the
+          essence of Ma and the playful nuances of language to create a unique,
+          inviting atmosphere. With a focus on understated elegance and a deep
+          appreciation for the natural world, my guest house promises a
+          memorable stay for travelers seeking a tranquil refuge in the heart of
+          Da Lat.
         </Typography>
       </Grid>
       <Grid

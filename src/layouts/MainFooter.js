@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Toolbar, Typography } from "@mui/material";
 
 function MainFooter() {
   return (
-    <div>MainFooter</div>
-  )
+    <Toolbar>
+      <Typography variant="body1">
+        © {new Date().getFullYear()} Phi Nguyen. All Rights Reserved.
+      </Typography>
+    </Toolbar>
+  );
 }
 
-export default MainFooter
+export default MainFooter;
