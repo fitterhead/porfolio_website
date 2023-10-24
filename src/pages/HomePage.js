@@ -25,7 +25,7 @@ function HomePage() {
       <Fair />
       <RiSpa />
       <Top100Album />
-      {/* <Misc1/> */}
+      <Misc1/>
       <EnneHomestay />
       <BombeeHoney/>
       <LoveMePoster />
