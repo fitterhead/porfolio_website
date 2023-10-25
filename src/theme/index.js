@@ -36,7 +36,7 @@ const TYPOGRAPHY = {
   h1: {
     fontFamily: "NeueMontreal-Book",
     fontWeight: 400,
-    fontSize: "0.8rem", // Default font size
+    fontSize: "1.5rem", // Default font size
     "@media (min-width:600px)": {
       fontSize: "1.5rem", // Font size for screens 600px and above
     },
@@ -50,7 +50,7 @@ const TYPOGRAPHY = {
   h2: {
     fontFamily: "NeueMontreal-Book",
     fontWeight: 400,
-    fontSize: "0.5rem", // Default font size
+    fontSize: "1rem", // Default font size
     "@media (min-width:600px)": {
       fontSize: "1rem", // Font size for screens 600px and above
     },

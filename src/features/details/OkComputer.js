@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 function OkComputer() {
+  const isSmallScreen = window.innerWidth < 600;
   return (
     <Container
       maxWidth="xl"
@@ -23,6 +24,7 @@ function OkComputer() {
           justifyContent: "center",
           alignItems: "center",
           aspectRatio: "2038/1359",
+          padding: isSmallScreen ? "1rem" : "3rem", // Adjust padding based on screen width
         }}
       >
         {/* Content for the first Grid item */}

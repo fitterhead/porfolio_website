@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 function SaigonZineDetail() {
+  const isSmallScreen = window.innerWidth < 600;
   return (
     <Container
       maxWidth="xl"
@@ -39,7 +40,7 @@ function SaigonZineDetail() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: "3rem",
+          padding: isSmallScreen ? "1rem" : "3rem", // Adjust padding based on screen width
           // aspectRatio: "2038/1359",
         }}
       >
