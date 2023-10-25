@@ -25,7 +25,7 @@ const Misc1 = () => {
     >
       <Grid item md={6} xs={12}>
         <Box
-          onClick={() => handleProject("beyond")}
+          onClick={() => handleProject("consumerism")}
           style={{
             padding: "1rem 1rem 0rem 1rem",
             cursor: "pointer",
