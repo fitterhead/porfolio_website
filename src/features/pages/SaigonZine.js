@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import "/Users/morita/web project/phineas_portfolio/src/styles.css";
+// import "/Users/morita/web project/phineas_portfolio/src/styles.css";
 
 function SaigonZine() {
   /* ------------------------------- import hook ------------------------------ */
