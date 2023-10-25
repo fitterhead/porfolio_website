@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 function LoveMePoster() {
@@ -7,6 +7,7 @@ function LoveMePoster() {
 
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/loveme");
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <Grid
       item
@@ -15,24 +16,38 @@ function LoveMePoster() {
       style={{
         backgroundImage: `url('/loveme.png')`,
         backgroundPosition: "center",
-        backgroundSize: "100% ",
+        backgroundSize: "100%",
         backgroundRepeat: "no-repeat",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
         alignItems: "center",
         aspectRatio: "2038/1359",
+        cursor: "pointer",
+        position: "relative",
+      }}
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
       }}
     >
       {/* Content for the first Grid item */}
       <Typography
+        onClick={() => handleProject()}
         variant="h1"
         align="center"
-        onClick={() => handleProject()}
-        className="responsive-heading"
-        sx={{ paddingBottom: "0.5rem", color: "white" }}
+        className="loveme-responsive-heading"
+        sx={{
+          paddingBottom: "0.5rem",
+          color: "white",
+          opacity: isHovered ? 1 : 0,
+          filter: `blur(${isHovered ? 0 : 15}px)`, // Apply blur only when not hovered
+          transition: "opacity 0.5s ease, filter 0.5s ease", // Slower transition (0.5s duration)
+        }}
       >
-        Experiental poster for a song, 2017
+        Experiential poster for a song, 2017
       </Typography>
     </Grid>
   );

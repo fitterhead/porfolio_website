@@ -51,6 +51,81 @@ function OkComputer() {
           aspectRatio: "1599/1067",
         }}
       ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/_3157633_PROJECT_2_Page_3.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "1599/1067",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/_3157633_PROJECT_2_Page_4.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "1599/1067",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/_3157633_PROJECT_2_Page_5.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "1599/1067",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/_3157633_PROJECT_2_Page_6.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "1599/1067",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/_3157633_PROJECT_2_Page_7.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "1599/1067",
+        }}
+      ></Grid>
     </Container>
   );
 }

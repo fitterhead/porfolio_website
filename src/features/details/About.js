@@ -7,7 +7,9 @@ const About = () => {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: "50px" }}>
+    <Container maxWidth="lg" style={{
+     marginTop: "50px"
+      }}>
       <Grid container spacing={2} alignItems="flex-start">
         {/* Image */}
         <Grid item xs={12} md={6}>

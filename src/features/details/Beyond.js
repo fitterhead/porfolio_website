@@ -22,7 +22,8 @@ function Beyond() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          aspectRatio: "2038/1359",
+          padding: "3rem",
+          // aspectRatio: "2038/1359",
         }}
       >
         {/* Content for the first Grid item */}
@@ -32,7 +33,16 @@ function Beyond() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-         Beyond
+          Beyond The Frame
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          className="responsive-heading"
+          sx={{ paddingBottom: "0.5rem" }}
+        >
+          Beyond the Frame is a logo for a new podcast program from Propeller
+          Gallery, a collaboration between me and the artist Doris Purchase.
         </Typography>
       </Grid>
 
@@ -40,7 +50,7 @@ function Beyond() {
         item
         xs={12}
         style={{
-          backgroundImage: `url('/_3157633_PROJECT_2_Page_2.png')`,
+          backgroundImage: `url('/Frame 15.png')`,
           backgroundPosition: "cover",
           backgroundSize: "100% ",
           backgroundRepeat: "no-repeat",
@@ -48,7 +58,22 @@ function Beyond() {
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center",
-          aspectRatio: "1599/1067",
+          aspectRatio: "2038/1359",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundImage: `url('/Frame 31.png')`,
+          backgroundPosition: "cover",
+          backgroundSize: "100% ",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          aspectRatio: "2038/1359",
         }}
       ></Grid>
     </Container>

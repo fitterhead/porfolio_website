@@ -32,7 +32,7 @@ function Top100Detail() {
           className="responsive-heading"
           sx={{ paddingBottom: "0.5rem" }}
         >
-         Top 100
+          Top 100
         </Typography>
       </Grid>
 
@@ -81,7 +81,6 @@ function Top100Detail() {
           aspectRatio: "2038/1359",
         }}
       ></Grid>
-      
     </Container>
   );
 }
