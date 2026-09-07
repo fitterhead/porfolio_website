@@ -1,35 +1,28 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
-
-const pages = ["About"];
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import { projectOrder, projects } from "../data/projects";
 
 function MainHeader() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  /* ------------------------------- import hook ------------------------------ */
   const navigate = useNavigate();
+  const [projectAnchorEl, setProjectAnchorEl] = React.useState(null);
 
-  /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/");
   const handleAbout = () => navigate("about");
+  const handleOpenProjectMenu = (event) => setProjectAnchorEl(event.currentTarget);
+  const handleCloseProjectMenu = () => setProjectAnchorEl(null);
+  const handleProjectNavigate = (path) => {
+    navigate(path);
+    handleCloseProjectMenu();
+  };
 
   return (
     <AppBar
@@ -45,7 +38,13 @@ function MainHeader() {
           },
         }}
       >
-        <Toolbar disableGutters sx={{ alignItems: "flex-start" }}>
+        <Toolbar
+          disableGutters
+          sx={{
+            alignItems: "flex-start",
+            gap: 2,
+          }}
+        >
           <Typography
             sx={{ cursor: "pointer" }}
             onClick={() => handleProject()}
@@ -57,78 +56,88 @@ function MainHeader() {
           <Box
             sx={{
               flexGrow: 1,
-              display: {
-                xs: "flex",
-                //  md: "none"
-              },
+              display: "flex",
               justifyContent: "flex-end",
+              alignItems: "flex-start",
+              gap: { xs: 2.5, md: 4 },
             }}
           >
-            {/* <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-              padding="0rem"
-            > */}
-            {/* <MenuIcon /> */}
             <Typography
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer", textTransform: "uppercase" }}
               onClick={() => handleAbout()}
               variant="menu"
             >
               About
             </Typography>
-            {/* </IconButton> */}
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+            <Button
+              onClick={handleOpenProjectMenu}
+              endIcon={<KeyboardArrowDownRoundedIcon />}
               sx={{
-                display: { xs: "block", md: "none" },
+                p: 0,
+                minWidth: 0,
+                color: "#050203",
+                textTransform: "uppercase",
+                alignItems: "flex-start",
+                "& .MuiButton-endIcon": {
+                  ml: 0.5,
+                },
               }}
             >
-              {pages.map((page) => (
+              <Typography variant="menu" sx={{ textTransform: "uppercase" }}>
+                Project
+              </Typography>
+            </Button>
+            <Menu
+              anchorEl={projectAnchorEl}
+              open={Boolean(projectAnchorEl)}
+              onClose={handleCloseProjectMenu}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              PaperProps={{
+                sx: {
+                  mt: 1.5,
+                  borderRadius: "18px",
+                  minWidth: { xs: 240, md: 320 },
+                  border: "1px solid rgba(5, 2, 3, 0.08)",
+                  boxShadow: "0 18px 48px rgba(5, 2, 3, 0.12)",
+                  backgroundColor: "rgba(255, 251, 246, 0.96)",
+                  backdropFilter: "blur(14px)",
+                },
+              }}
+            >
+              {projectOrder.map((key) => (
                 <MenuItem
-                  key={page}
-                  // onClick={() => handlePage(page)}
+                  key={key}
+                  onClick={() => handleProjectNavigate(projects[key].path)}
+                  sx={{
+                    py: 1.25,
+                    px: 2,
+                    whiteSpace: "normal",
+                    alignItems: "flex-start",
+                  }}
                 >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontFamily: "NeueMontreal-Book",
+                        fontSize: "1rem",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.06em",
+                      }}
+                    >
+                      {projects[key].title}
+                    </Typography>
+                  </Box>
                 </MenuItem>
               ))}
-            </Menu> */}
+            </Menu>
           </Box>
-          {/* <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "center",
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                // onClick={() => handlePage(page)}
-                sx={{ my: 2, color: "black", display: "block" }}
-              >
-                <Typography sx={{ fontSize: "14px" }} variant="body1">
-                  {page}
-                </Typography>
-              </Button>
-            ))}
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

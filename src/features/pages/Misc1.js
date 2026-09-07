@@ -1,13 +1,10 @@
 import React from "react";
 import {
   Grid,
-  Paper,
-  Card,
   CardContent,
   CardMedia,
   Typography,
   Box,
-  Container,
 } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";

@@ -10,3 +10,92 @@
 }
 
 /* ---------------------- change text color when hover ---------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #050203;
+  background: #faf7f2;
+}
+
+a {
+  color: inherit;
+}
+
+.background-paper {
+  min-height: 100vh;
+  background: #faf7f2;
+}
+
+.route-page {
+  animation: routeFadeIn 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.route-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  z-index: 1600;
+  pointer-events: none;
+}
+
+.route-progress::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #050203, #826f66, #dfbb9d);
+  opacity: 0;
+}
+
+.route-progress.is-active::after {
+  animation: routeProgress 650ms ease forwards;
+}
+
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes routeProgress {
+  0% {
+    opacity: 0.85;
+    transform: scaleX(0);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scaleX(0.82);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .route-page,
+  .route-progress.is-active::after {
+    animation: none;
+  }
+}

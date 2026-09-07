@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 function LoveMePoster() {
   /* ------------------------------- import hook ------------------------------ */

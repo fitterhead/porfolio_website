@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography, Box } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 const About = () => {
   const openPdfFile = () => {
@@ -48,10 +48,20 @@ const About = () => {
               <br />
               Phone: +1 (647) 561-1199
               <br />
-              <a href="#" onClick={openPdfFile}>
-                Read here to know more about me
-              </a>
             </Typography>
+            <Button
+              variant="text"
+              onClick={openPdfFile}
+              sx={{
+                mt: 1,
+                px: 0,
+                minWidth: 0,
+                textTransform: "none",
+                justifyContent: "flex-start",
+              }}
+            >
+              Read here to know more about me
+            </Button>
           </Box>
         </Grid>
       </Grid>

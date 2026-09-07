@@ -1,12 +1,5 @@
-import React, { useState } from "react";
-import {
-  alpha,
-  createTheme,
-  CssBaseline,
-  ThemeProvider as MUIThemeProvider,
-} from "@mui/material";
-import { useContext } from "react";
-import { useEffect } from "react";
+import React from "react";
+import { createTheme, CssBaseline, ThemeProvider as MUIThemeProvider } from "@mui/material";
 import "../styles.css";
 
 const COMPONENTS = {

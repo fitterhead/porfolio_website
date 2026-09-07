@@ -7,8 +7,8 @@ import BombeeHoney from "../features/pages/BombeeHoney";
 import LoveMePoster from "../features/pages/LoveMePoster";
 import EnneHomestay from "../features/pages/EnneHomestay";
 import Misc1 from "../features/pages/Misc1";
-
-import { Container, Grid, Typography } from "@mui/material";
+import { Container } from "@mui/material";
+import Reveal from "../components/Reveal";
 
 function HomePage() {
   return (
@@ -21,14 +21,30 @@ function HomePage() {
         },
       }}
     >
-      <SaigonZine />
-      <Fair />
-      <RiSpa />
-      <Top100Album />
-      <Misc1/>
-      <EnneHomestay />
-      <BombeeHoney/>
-      <LoveMePoster />
+      <Reveal delay={20}>
+        <SaigonZine />
+      </Reveal>
+      <Reveal delay={40}>
+        <Fair />
+      </Reveal>
+      <Reveal delay={60}>
+        <RiSpa />
+      </Reveal>
+      <Reveal delay={80}>
+        <Top100Album />
+      </Reveal>
+      <Reveal delay={100}>
+        <Misc1 />
+      </Reveal>
+      <Reveal delay={120}>
+        <EnneHomestay />
+      </Reveal>
+      <Reveal delay={140}>
+        <BombeeHoney />
+      </Reveal>
+      <Reveal delay={160}>
+        <LoveMePoster />
+      </Reveal>
     </Container>
   );
 }
