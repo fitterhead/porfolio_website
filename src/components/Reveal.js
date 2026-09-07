@@ -12,6 +12,11 @@ function Reveal({ children, delay = 0, distance = 28, sx = {}, ...props }) {
       return undefined;
     }
 
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,8 +25,8 @@ function Reveal({ children, delay = 0, distance = 28, sx = {}, ...props }) {
         }
       },
       {
-        threshold: 0.18,
-        rootMargin: "0px 0px -48px 0px",
+        threshold: 0,
+        rootMargin: "0px 0px 100px 0px",
       }
     );
 

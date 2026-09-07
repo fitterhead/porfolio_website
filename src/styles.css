@@ -25,6 +25,16 @@ a {
   color: inherit;
 }
 
+.project-card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.project-card-link:focus-visible {
+  outline: 3px solid #050203;
+  outline-offset: -3px;
+}
+
 .background-paper {
   min-height: 100vh;
   background: #faf7f2;

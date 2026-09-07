@@ -17,9 +17,30 @@ function ProjectDetailPage({ projectKey }) {
   const project = getProjectByKey(projectKey);
   const { previousProject, nextProject } = getAdjacentProjects(projectKey);
   const [hoveredSide, setHoveredSide] = React.useState(null);
+  const [imageRatios, setImageRatios] = React.useState({});
 
   if (!project) {
     return null;
+  }
+
+  const handleImageLoad = (event, image) => {
+    const { naturalWidth, naturalHeight } = event.currentTarget;
+    if (naturalWidth && naturalHeight) {
+      setImageRatios((current) => ({ ...current, [image]: naturalWidth / naturalHeight }));
+    }
+  };
+
+  const isPortrait = (image) => imageRatios[image] && imageRatios[image] < 0.9;
+  const galleryGroups = [];
+  for (let index = 0; index < project.media.length; index += 1) {
+    const image = project.media[index];
+    const nextImage = project.media[index + 1];
+    if (isPortrait(image) && nextImage && isPortrait(nextImage)) {
+      galleryGroups.push([image, nextImage]);
+      index += 1;
+    } else {
+      galleryGroups.push([image]);
+    }
   }
 
   return (
@@ -132,13 +153,7 @@ function ProjectDetailPage({ projectKey }) {
           >
             <Typography variant="h1">{project.title}</Typography>
             {project.description.map((paragraph) => (
-              <Typography
-                key={paragraph}
-                variant="h2"
-                sx={{
-                  maxWidth: "1100px",
-                }}
-              >
+              <Typography key={paragraph} variant="h2" sx={{ maxWidth: "1100px" }}>
                 {paragraph}
               </Typography>
             ))}
@@ -146,20 +161,21 @@ function ProjectDetailPage({ projectKey }) {
         </Reveal>
 
         <Stack spacing={{ xs: 2, md: 3 }}>
-          {project.media.map((image, index) => (
-            <Reveal key={image} delay={Math.min(index * 40, 220)}>
-              <Box
-                component="img"
-                src={image}
-                alt={`${project.title} preview ${index + 1}`}
-                loading="lazy"
-                sx={{
-                  display: "block",
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-            </Reveal>
+          {galleryGroups.map((group, groupIndex) => (
+            <Box key={group.join("-")} sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: group.length === 2 ? "repeat(2, minmax(0, 1fr))" : "1fr" }, gap: { xs: 2, md: 3 } }}>
+              {group.map((image, imageIndex) => (
+                <Box
+                  key={image}
+                  component="img"
+                  src={image}
+                  alt={`${project.title} preview ${groupIndex + imageIndex + 1}`}
+                  loading={groupIndex === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  onLoad={(event) => handleImageLoad(event, image)}
+                  sx={{ display: "block", width: "100%", height: "auto", minHeight: "1px" }}
+                />
+              ))}
+            </Box>
           ))}
         </Stack>
 

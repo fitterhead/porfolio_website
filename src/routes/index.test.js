@@ -1,0 +1,52 @@
+import React from "react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
+import { MemoryRouter, useLocation } from "react-router-dom";
+import Router from "./index";
+import { projectOrder, projects } from "../data/projects";
+
+jest.mock("../components/Reveal", () => ({
+  __esModule: true,
+  default: ({ children }) => <>{children}</>,
+}));
+
+function Location() {
+  return <output data-testid="location">{useLocation().pathname}</output>;
+}
+
+function open(path) {
+  return render(
+    <MemoryRouter initialEntries={[path]}>
+      <Router />
+      <Location />
+    </MemoryRouter>
+  );
+}
+
+afterEach(cleanup);
+
+test.each(projectOrder)("old project %s still renders its content", (key) => {
+  const project = projects[key];
+  open(project.path);
+  expect(screen.getByRole("heading", { name: project.title })).toBeTruthy();
+  expect(screen.getAllByRole("img").length).toBe(project.media.length);
+});
+
+test.each([
+  ["Terroni Summer Menu 2025", "/summer-menu-2025"],
+  ["Terroni Spring/Summer Menu 2026", "/summer-2026"],
+  ["Window graphics for Terroni", "/terroni-la-window-screen"],
+  ["Apron design for Terroni", "/apron"],
+  ["Tote bag design for Terroni", "/tote-bag"],
+  ["Serving tray design", "/tray"],
+  ["Curtain design", "/curtain"],
+])("homepage card %s navigates to its page", (title, path) => {
+  open("/");
+  fireEvent.click(screen.getByRole("link", { name: new RegExp(title) }));
+  expect(screen.getByTestId("location").textContent).toBe(path);
+});
+
+test("unknown addresses offer a way home", () => {
+  open("/missing-project");
+  expect(screen.getByRole("heading", { name: "Page not found" })).toBeTruthy();
+  expect(screen.getByRole("link", { name: "Back to projects" }).getAttribute("href")).toBe("/");
+});

@@ -11,12 +11,16 @@ import { useNavigate } from "react-router-dom";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import { projectOrder, projects } from "../data/projects";
 
+const menuProjects = [
+  ...projectOrder.map((key) => projects[key]),
+];
+
 function MainHeader() {
   const navigate = useNavigate();
   const [projectAnchorEl, setProjectAnchorEl] = React.useState(null);
 
   const handleProject = () => navigate("/");
-  const handleAbout = () => navigate("about");
+  const handleAbout = () => navigate("/about");
   const handleOpenProjectMenu = (event) => setProjectAnchorEl(event.currentTarget);
   const handleCloseProjectMenu = () => setProjectAnchorEl(null);
   const handleProjectNavigate = (path) => {
@@ -111,10 +115,10 @@ function MainHeader() {
                 },
               }}
             >
-              {projectOrder.map((key) => (
+              {menuProjects.map((project) => (
                 <MenuItem
-                  key={key}
-                  onClick={() => handleProjectNavigate(projects[key].path)}
+                  key={project.path}
+                  onClick={() => handleProjectNavigate(project.path)}
                   sx={{
                     py: 1.25,
                     px: 2,
@@ -131,7 +135,7 @@ function MainHeader() {
                         letterSpacing: "0.06em",
                       }}
                     >
-                      {projects[key].title}
+                      {project.title}
                     </Typography>
                   </Box>
                 </MenuItem>
