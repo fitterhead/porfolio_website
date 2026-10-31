@@ -38,7 +38,6 @@ test.each([
   ["Apron design for Terroni", "/apron"],
   ["Tote bag design for Terroni", "/tote-bag"],
   ["Serving tray design", "/tray"],
-  ["Curtain design", "/curtain"],
 ])("homepage card %s navigates to its page", (title, path) => {
   open("/");
   fireEvent.click(screen.getByRole("link", { name: new RegExp(title) }));
@@ -49,4 +48,21 @@ test("unknown addresses offer a way home", () => {
   open("/missing-project");
   expect(screen.getByRole("heading", { name: "Page not found" })).toBeTruthy();
   expect(screen.getByRole("link", { name: "Back to projects" }).getAttribute("href")).toBe("/");
+});
+
+test("Curtain stays unpublished across homepage, menu and direct route", () => {
+  const view = open("/");
+  expect(screen.queryByRole("link", { name: /Curtain/i })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "Browse projects" }));
+  expect(screen.queryByRole("menuitem", { name: /Curtain/i })).toBeNull();
+  view.unmount();
+  open("/curtain");
+  expect(screen.getByRole("heading", { name: "Page not found" })).toBeTruthy();
+});
+
+test("project navigation skips Curtain and provides visible links", () => {
+  open("/summer-2026");
+  expect(screen.getByRole("link", { name: /Next: Terroni & Sud Forno/ }).getAttribute("href")).toBe("/apron");
+  expect(screen.getByRole("link", { name: /Previous: Terroni LA/ }).getAttribute("href")).toBe("/terroni-la-window-screen");
+  expect(screen.getAllByRole("link", { name: "All projects" }).length).toBe(2);
 });

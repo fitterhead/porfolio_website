@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ function Apron() {
 
   const handleProject = () => navigate("/apron");
 
+  const cover = useBackgroundImage("/Apron/20260102-_Apron8440.jpg", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={handleProject}
+      {...cover}
       style={{
-        backgroundImage: "url('/Apron/20260102-_Apron8440.jpg')",
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

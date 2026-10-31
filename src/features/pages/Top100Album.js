@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -10,13 +11,15 @@ function Top100Album() {
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/top100");
 
+  const cover = useBackgroundImage("/top100.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={() => handleProject()}
+      {...cover}
       style={{
-        backgroundImage: `url('/top100.png')`,
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

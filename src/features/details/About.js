@@ -1,11 +1,8 @@
+import { imageProps } from "../../utils/images";
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 const About = () => {
-  const openPdfFile = () => {
-    window.open("/Phi Nguyen_Resume.pdf", "_blank");
-  };
-
   return (
     <Container maxWidth="lg" style={{
      marginTop: "50px"
@@ -14,7 +11,7 @@ const About = () => {
         {/* Image */}
         <Grid item xs={12} md={6}>
           <img
-            src="/81631351_2811445118914931_1487271570295488512_n.jpg"
+            {...imageProps("/81631351_2811445118914931_1487271570295488512_n.jpg", "(max-width: 900px) 100vw, 600px")}
             alt="Profile"
             style={{ width: "100%", height: "auto" }}
           />
@@ -44,14 +41,17 @@ const About = () => {
               global scale.
             </Typography>
             <Typography variant="body2">
-              Email: xuanphiart@gmail.com
+              Email: <a href="mailto:xuanphiart@gmail.com">xuanphiart@gmail.com</a>
               <br />
-              Phone: +1 (647) 561-1199
+              Phone: <a href="tel:+16475611199">+1 (647) 561-1199</a>
               <br />
             </Typography>
             <Button
               variant="text"
-              onClick={openPdfFile}
+              component="a"
+              href="/Phi Nguyen_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 mt: 1,
                 px: 0,
@@ -60,7 +60,7 @@ const About = () => {
                 justifyContent: "flex-start",
               }}
             >
-              Read here to know more about me
+              View résumé (PDF)
             </Button>
           </Box>
         </Grid>

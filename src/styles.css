@@ -109,3 +109,82 @@ a {
     animation: none;
   }
 }
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: "NeueMontreal-Book", sans-serif;
+  font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+  text-decoration: none;
+  text-underline-offset: 6px;
+  white-space: nowrap;
+}
+.nav-link:hover,
+.nav-link.active,
+.nav-link.section-active {
+  text-decoration: underline;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #563635;
+  outline-offset: 4px;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 20px;
+  background: #050203;
+  color: #faf7f2;
+}
+.skip-link:focus { top: 12px; }
+
+/* Fixed edge links live outside the animated page so they follow the viewport. */
+.project-edge-nav { display: none; }
+.project-touch-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 24px 16px;
+}
+.project-touch-nav a { color: #050203; font-size: 0.75rem; }
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  .project-touch-nav { display: none; }
+  .project-edge-nav { display: block; }
+  .project-edge {
+    position: fixed;
+    top: 124px;
+    bottom: 0;
+    width: clamp(48px, 6vw, 88px);
+    z-index: 1101;
+    color: #050203;
+    text-decoration: none;
+  }
+  .project-edge-previous { left: 0; }
+  .project-edge-next { right: 0; }
+  .project-edge-label {
+    position: fixed;
+    top: clamp(156px, var(--pointer-y, 50vh), calc(100vh - 40px));
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(250, 247, 242, 0.94);
+    backdrop-filter: blur(8px);
+    font: 16px "NeueMontreal-Book", sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 160ms ease;
+  }
+  .project-edge-previous .project-edge-label { left: 16px; }
+  .project-edge-next .project-edge-label { right: 16px; flex-direction: row-reverse; }
+  .project-edge:hover .project-edge-label,
+  .project-edge:focus-visible .project-edge-label { opacity: 1; pointer-events: auto; }
+  .project-edge:focus-visible .project-edge-label { top: 50vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-edge-label { transition: none; }
+}

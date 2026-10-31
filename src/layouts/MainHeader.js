@@ -1,151 +1,45 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { useNavigate } from "react-router-dom";
+import { AppBar, Box, Button, Container, Divider, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import { projectOrder, projects } from "../data/projects";
 
-const menuProjects = [
-  ...projectOrder.map((key) => projects[key]),
-];
-
 function MainHeader() {
-  const navigate = useNavigate();
-  const [projectAnchorEl, setProjectAnchorEl] = React.useState(null);
-
-  const handleProject = () => navigate("/");
-  const handleAbout = () => navigate("/about");
-  const handleOpenProjectMenu = (event) => setProjectAnchorEl(event.currentTarget);
-  const handleCloseProjectMenu = () => setProjectAnchorEl(null);
-  const handleProjectNavigate = (path) => {
-    navigate(path);
-    handleCloseProjectMenu();
-  };
+  const { pathname } = useLocation();
+  const [anchor, setAnchor] = React.useState(null);
+  const closeMenu = () => setAnchor(null);
+  React.useEffect(() => setAnchor(null), [pathname]);
+  const isProject = projectOrder.some((key) => projects[key].path === pathname);
 
   return (
-    <AppBar
-      position="sticky"
-      style={{ background: "transparent", boxShadow: "none" }}
-    >
-      <Container
-        maxWidth="xl"
-        sx={{
-          paddingTop: "0.7rem", // Default padding
-          "@media (min-width: 600px)": {
-            paddingTop: "1.5rem", // Set padding to 1rem when minWidth is 600px or more
-          },
-        }}
-      >
-        <Toolbar
-          disableGutters
-          sx={{
-            alignItems: "flex-start",
-            gap: 2,
-          }}
-        >
-          <Typography
-            sx={{ cursor: "pointer" }}
-            onClick={() => handleProject()}
-            variant="logo"
-          >
-            Phi <br />
-            Nguyen
+    <AppBar position="sticky" elevation={0} sx={{ backgroundColor: "rgba(250,247,242,0.95)", backdropFilter: "blur(14px)", color: "#050203", borderBottom: "1px solid rgba(5,2,3,0.1)" }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters sx={{ py: { xs: 1.5, md: 2 }, gap: 2, justifyContent: "space-between" }}>
+          <Typography component={Link} to="/" aria-label="Phi Nguyen — home" variant="logo" sx={{ textDecoration: "none", flexShrink: 0 }}>
+            Phi <br />Nguyen
           </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "flex-start",
-              gap: { xs: 2.5, md: 4 },
-            }}
-          >
-            <Typography
-              sx={{ cursor: "pointer", textTransform: "uppercase" }}
-              onClick={() => handleAbout()}
-              variant="menu"
-            >
-              About
-            </Typography>
-            <Button
-              onClick={handleOpenProjectMenu}
-              endIcon={<KeyboardArrowDownRoundedIcon />}
-              sx={{
-                p: 0,
-                minWidth: 0,
-                color: "#050203",
-                textTransform: "uppercase",
-                alignItems: "flex-start",
-                "& .MuiButton-endIcon": {
-                  ml: 0.5,
-                },
-              }}
-            >
-              <Typography variant="menu" sx={{ textTransform: "uppercase" }}>
-                Project
-              </Typography>
-            </Button>
-            <Menu
-              anchorEl={projectAnchorEl}
-              open={Boolean(projectAnchorEl)}
-              onClose={handleCloseProjectMenu}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              PaperProps={{
-                sx: {
-                  mt: 1.5,
-                  borderRadius: "18px",
-                  minWidth: { xs: 240, md: 320 },
-                  border: "1px solid rgba(5, 2, 3, 0.08)",
-                  boxShadow: "0 18px 48px rgba(5, 2, 3, 0.12)",
-                  backgroundColor: "rgba(255, 251, 246, 0.96)",
-                  backdropFilter: "blur(14px)",
-                },
-              }}
-            >
-              {menuProjects.map((project) => (
-                <MenuItem
-                  key={project.path}
-                  onClick={() => handleProjectNavigate(project.path)}
-                  sx={{
-                    py: 1.25,
-                    px: 2,
-                    whiteSpace: "normal",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <Box>
-                    <Typography
-                      sx={{
-                        fontFamily: "NeueMontreal-Book",
-                        fontSize: "1rem",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      {project.title}
-                    </Typography>
-                  </Box>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box component="nav" aria-label="Main navigation" sx={{ display: "flex", alignItems: "center", gap: { xs: 0.75, sm: 2, md: 3 } }}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <NavLink to="/" end className={`nav-link${isProject ? " section-active" : ""}`}>Work</NavLink>
+              <Button id="project-menu-button" aria-label="Browse projects" aria-controls={anchor ? "project-menu" : undefined} aria-haspopup="true" aria-expanded={Boolean(anchor)} onClick={(event) => setAnchor(event.currentTarget)} sx={{ minWidth: 44, minHeight: 44, p: 0, color: "inherit" }}>
+                <KeyboardArrowDownRoundedIcon sx={{ transform: anchor ? "rotate(180deg)" : "none", transition: "transform 180ms" }} />
+              </Button>
+            </Box>
+            <NavLink to="/about" className="nav-link">About</NavLink>
+            <a href="mailto:xuanphiart@gmail.com" className="nav-link">Contact <span aria-hidden="true">↗</span></a>
           </Box>
+          <Menu id="project-menu" anchorEl={anchor} open={Boolean(anchor)} onClose={closeMenu} MenuListProps={{ "aria-labelledby": "project-menu-button" }} anchorOrigin={{ vertical: "bottom", horizontal: "right" }} transformOrigin={{ vertical: "top", horizontal: "right" }} PaperProps={{ sx: { mt: 1, borderRadius: 2, width: { xs: "calc(100vw - 32px)", sm: 380 }, maxHeight: "min(70vh, 560px)", border: "1px solid rgba(5,2,3,0.12)", backgroundColor: "#faf7f2", boxShadow: "0 16px 48px rgba(5,2,3,0.12)" } }}>
+            <MenuItem component={Link} to="/" onClick={closeMenu} selected={pathname === "/"} sx={{ minHeight: 48 }}>All projects</MenuItem>
+            <Divider />
+            {projectOrder.map((key) => (
+              <MenuItem key={key} component={Link} to={projects[key].path} onClick={closeMenu} selected={pathname === projects[key].path} aria-current={pathname === projects[key].path ? "page" : undefined} sx={{ py: 1.5, whiteSpace: "normal", fontFamily: "NeueMontreal-Book", fontSize: "1rem" }}>
+                {projects[key].title}
+              </MenuItem>
+            ))}
+          </Menu>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
-
 export default MainHeader;

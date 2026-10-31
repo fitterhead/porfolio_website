@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ function SummerMenu2025() {
 
   const handleProject = () => navigate("/summer-menu-2025");
 
+  const cover = useBackgroundImage("/menu2025/2025Menu-1.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={handleProject}
+      {...cover}
       style={{
-        backgroundImage: "url('/menu2025/2025Menu-1.png')",
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

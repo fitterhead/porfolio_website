@@ -21,9 +21,10 @@ function MainLayout() {
   return (
     <Stack sx={{ minHeight: "100vh" }}>
       <Box className={`route-progress ${isRouteTransitioning ? "is-active" : ""}`} />
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <MainHeader />
 
-      <Box key={location.pathname} className="route-page">
+      <Box component="main" id="main-content" tabIndex={-1} key={location.pathname} className="route-page">
         <Outlet />
       </Box>
 

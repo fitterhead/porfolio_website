@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ function ToteBag() {
 
   const handleProject = () => navigate("/tote-bag");
 
+  const cover = useBackgroundImage("/ToteBag/20260102-_totebag8549.jpg", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={handleProject}
+      {...cover}
       style={{
-        backgroundImage: "url('/ToteBag/20260102-_totebag8549.jpg')",
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

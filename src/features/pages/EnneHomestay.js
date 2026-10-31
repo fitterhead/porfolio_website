@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -10,13 +11,15 @@ function EnneHomestay() {
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/enne");
 
+  const cover = useBackgroundImage("/enne.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={() => handleProject()}
+      {...cover}
       style={{
-        backgroundImage: `url('/enne.png')`,
         backgroundPosition: "center",
         backgroundSize: "100% ",
         backgroundRepeat: "no-repeat",

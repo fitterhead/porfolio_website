@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -10,13 +11,15 @@ function RiSpa() {
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/rispa");
 
+  const cover = useBackgroundImage("/RiSpa.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={() => handleProject()}
+      {...cover}
       style={{
-        backgroundImage: `url('/RiSpa.png')`,
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

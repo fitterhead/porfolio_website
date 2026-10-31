@@ -1,3 +1,4 @@
+import { imageProps } from "../../utils/images";
 import React from "react";
 import {
   Grid,
@@ -41,9 +42,11 @@ const Misc1 = () => {
           <CardMedia
             component="img"
             alt="Card Image"
-            height="70%"
-            image="/Frame 14.png"
-            style={{ objectFit: "cover" }}
+
+            {...imageProps("/Frame 14.png")}
+            loading="lazy"
+            decoding="async"
+            style={{ objectFit: "cover", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{
@@ -95,9 +98,11 @@ const Misc1 = () => {
           <CardMedia
             component="img"
             alt="Card Image"
-            height="70%"
-            image="/Frame 15.png"
-            style={{ objectFit: "cover" }}
+
+            {...imageProps("/Frame 15.png")}
+            loading="lazy"
+            decoding="async"
+            style={{ objectFit: "cover", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{
@@ -148,9 +153,11 @@ const Misc1 = () => {
           <CardMedia
             component="img"
             alt="Card Image"
-            height="70%"
-            image="/Frame 16.png"
-            style={{ objectFit: "cover" }}
+
+            {...imageProps("/Frame 16.png")}
+            loading="lazy"
+            decoding="async"
+            style={{ objectFit: "cover", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{

@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Portfolio images
+
+The site serves responsive WebP copies from `public/optimized/`; original images
+are retained for future edits. The generated mapping in
+`src/data/image-manifest.json` includes dimensions to keep gallery layouts stable.
+Homepage covers download as they approach the viewport; the first cover loads
+immediately. Gallery images use `srcset` with 640/1280/2400 px widths (without
+upscaling), quality 90, and sRGB conversion for embedded colour profiles.
+
+To regenerate after adding or replacing an original image, install Pillow in a
+Python virtual environment and run `python scripts/optimize-images.py`. Commit the
+WebP files and manifest together with source changes. Netlify only needs the
+normal `npm run build`; no image tooling is required at deploy time. The build
+removes original-image copies from `build/` after verifying the WebP files exist,
+so Netlify receives only the optimized versions. Originals in `public/` are untouched.

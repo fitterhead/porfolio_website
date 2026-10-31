@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -11,13 +12,15 @@ function SaigonZine() {
   /* ---------------------- create chuyen route function ---------------------- */
   const handleProject = () => navigate("/saigonzine");
 
+  const cover = useBackgroundImage("/covermockup.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={() => handleProject()}
+      {...cover}
       style={{
-        backgroundImage: `url('/covermockup.png')`,
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

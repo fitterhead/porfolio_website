@@ -1,7 +1,6 @@
 export const projectOrder = [
   "terronilawindow",
   "summer2026",
-  "curtain",
   "apron",
   "totebag",
   "tray",

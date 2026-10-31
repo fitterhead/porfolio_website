@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ function Tray() {
 
   const handleProject = () => navigate("/tray");
 
+  const cover = useBackgroundImage("/tray/Tray1.png", false);
+
   return (
     <Grid
       item
       xs={12}
       onClick={handleProject}
+      {...cover}
       style={{
-        backgroundImage: "url('/tray/Tray1.png')",
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

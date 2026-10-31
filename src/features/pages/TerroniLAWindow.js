@@ -1,3 +1,4 @@
+import { useBackgroundImage } from "../../utils/images";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ function TerroniLAWindow() {
 
   const handleProject = () => navigate("/terroni-la-window-screen");
 
+  const cover = useBackgroundImage("/WindowScreen/terLAwindowScreen.png", true);
+
   return (
     <Grid
       item
       xs={12}
       onClick={handleProject}
+      {...cover}
       style={{
-        backgroundImage: "url('/WindowScreen/terLAwindowScreen.png')",
         backgroundPosition: "center",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",

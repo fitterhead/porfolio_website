@@ -16,7 +16,6 @@ import TerroniLAWindow from "../features/pages/TerroniLAWindow";
 import Apron from "../features/pages/Apron";
 import ToteBag from "../features/pages/ToteBag";
 import Tray from "../features/pages/Tray";
-import Curtain from "../features/pages/Curtain";
 
 function HomePage() {
   return (
@@ -31,7 +30,6 @@ function HomePage() {
     >
       <Reveal delay={10}><Link className="project-card-link" to="/terroni-la-window-screen"><TerroniLAWindow preview /></Link></Reveal>
       <Reveal delay={20}><Link className="project-card-link" to="/summer-2026"><Summer2026 preview /></Link></Reveal>
-      <Reveal delay={30}><Link className="project-card-link" to="/curtain"><Curtain preview /></Link></Reveal>
       <Reveal delay={40}><Link className="project-card-link" to="/apron"><Apron preview /></Link></Reveal>
       <Reveal delay={50}><Link className="project-card-link" to="/tote-bag"><ToteBag preview /></Link></Reveal>
       <Reveal delay={60}><Link className="project-card-link" to="/tray"><Tray preview /></Link></Reveal>
