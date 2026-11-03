@@ -57,8 +57,17 @@ function ProjectDetailPage({ projectKey }) {
           >
             <Button component={Link} to="/" startIcon={<ArrowBackRoundedIcon />} sx={{ color: "#050203" }}>All projects</Button>
             <Typography variant="h1">{project.title}</Typography>
-            {project.description.map((paragraph) => (
-              <Typography component="p" key={paragraph} variant="h2" sx={{ maxWidth: "1100px" }}>
+            {project.sectionHeadings ? (
+              <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, minmax(0, 1fr))" }, gap: { xs: 3, md: 5 }, textAlign: "left", width: "100%", maxWidth: "1200px", pt: 3 }}>
+                {project.description.map((paragraph, index) => (
+                  <Box component="section" key={paragraph}>
+                    <Typography component="h2" sx={{ fontFamily: "NeueMontreal-Book", fontSize: "1.15rem", mb: 1.5 }}>{project.sectionHeadings[index]}</Typography>
+                    <Typography component="p" sx={{ fontFamily: "NeueMontreal-Book", fontSize: "1rem", lineHeight: 1.75 }}>{paragraph}</Typography>
+                  </Box>
+                ))}
+              </Box>
+            ) : project.description.map((paragraph) => (
+              <Typography component="p" key={paragraph} sx={{ fontFamily: "NeueMontreal-Book", fontSize: { xs: "1.05rem", md: "1.3rem" }, lineHeight: 1.7, maxWidth: "850px" }}>
                 {paragraph}
               </Typography>
             ))}

@@ -42,6 +42,7 @@ export const projects = {
     path: "/terroni-la-window-screen",
     title: "Terroni LA — Window Screens",
     teaser: "Window graphics for Terroni in Los Angeles, 2026",
+    sectionHeadings: ["The brief", "Visual direction", "Production & coordination"],
     description: [
       "Window graphics for Terroni in Los Angeles, designed to make the restaurant easily recognisable from the street while keeping the visuals subtle and understated.",
       "Inspired by wheat fields, linen and old pasta packaging, the screens combine linear patterns with geometric lettering. Printed directly onto frosted vinyl, the graphics bring pattern and lettering into the restaurant’s windows.",
@@ -53,6 +54,7 @@ export const projects = {
     path: "/apron",
     title: "Terroni & Sud Forno — Aprons",
     teaser: "Apron design for Terroni and Sud Forno, 2025",
+    sectionHeadings: ["The brief", "Design decisions", "Sampling & production"],
     description: [
       "A branded apron collection for Terroni and Sud Forno, created in 2025 for staff to wear during daily service.",
       "Inspired by Italian suits, the design uses front pockets and a slim waist to bring together tailoring and workwear. Shoulder buckles make adjustment easier, addressing the uneven fit of the previous aprons. The shorter version has extra pockets for the tools staff carry during service.",
@@ -94,10 +96,10 @@ export const projects = {
   saigonzine: {
     path: "/saigonzine",
     title: "The Un-Michelin Guide to Saigon food destinations",
-    teaser: "A zine about HCMC best hidden street foods, 2023",
+    teaser: "An editorial guide to Saigon’s hidden street food, 2023",
     description: [
       "A zine catering to foreign visitors, exploring Saigon's culinary delights through the discerning eyes of locals. Think of it as a more authentic, localized version of the Michelin Guide, sparking diverse opinions and conversations.",
-      "I envision a modern layout using contemporary fonts, yet drawing inspiration from the color schemes and typography reminiscent of Vietnamese book covers from the 2000s. This fusion of modernity and nostalgia will create a visually captivating experience, capturing the essence of Saigon's rich culinary landscape.",
+      "The layouts pair contemporary typography with colours and lettering inspired by Vietnamese book covers from the 2000s, connecting a modern travel guide with familiar local references.",
       "My zine serves as a cultural bridge, guiding international travelers to hidden gems and beloved eateries cherished by the locals. Through vibrant visuals and engaging narratives, it invites readers into the heart of Saigon's gastronomic journey.",
     ],
     media: [
@@ -117,7 +119,7 @@ export const projects = {
   },
   fair: {
     path: "/fair",
-    title: "Vietnam Typical Good Fair 2023 Poster",
+    title: "Vietnam Typical Goods Fair — Posters",
     teaser: "Poster series for Vietnam Typical Goods Fair, 2023",
     description: [
       "A series of posters designed for the Vietnam Typical Goods Fair, hosted at the Saigon Exhibition and Convention Center in August 2023.",
@@ -128,7 +130,8 @@ export const projects = {
   rispa: {
     path: "/rispa",
     title: "Ri Beauty Spa",
-    teaser: "Branding design for a spa in Tokyo, 2021",
+    teaser: "Brand identity for a spa in Kawasaki, Japan, 2021",
+    sectionHeadings: ["The brief", "Naming strategy", "Identity direction"],
     description: [
       "Ri Beauty Spa is a Japanese beauty salon in Kawasaki City founded by a Vietnamese immigrant entrepreneur. The brand was created to feel welcoming, practical, and accessible for both Japanese customers and working-class immigrant women.",
       "During the naming stage, I researched competitors and noticed many salons relied on foreign words that were difficult to pronounce. I recommended a name that is easy to read, remember, and share through word of mouth.",
@@ -148,7 +151,7 @@ export const projects = {
     path: "/top100",
     title: "Top 100",
     teaser: "Editorial and graphic exploration for Top 100",
-    description: [],
+    description: ["An editorial and graphic exploration presented through a series of layouts for Top 100."],
     media: [
       "/Screenshot 2023-10-20 at 07.38.04.png",
       "/Screenshot 2023-10-20 at 07.38.48.png",
@@ -157,7 +160,7 @@ export const projects = {
   },
   consumerism: {
     path: "/consumerism",
-    title: "Solitanianian-ism",
+    title: "Solitarianianism",
     teaser: "A conceptual project about consumerism, 2020",
     description: [
       "Solitarianianism critiques overconsumption and the emptiness of materialism through a fictional ideology. In this world, the price of each item increases based on the quantity purchased, pushing people to reconsider excess.",
@@ -190,7 +193,7 @@ export const projects = {
     path: "/okcomputer",
     title: "OK Computer",
     teaser: "Redesign of Radiohead's album OK Computer, 2019",
-    description: [],
+    description: ["A 2019 redesign of Radiohead’s OK Computer, exploring an alternative visual treatment for the album through cover artwork and accompanying layouts."],
     media: [
       "/_3157633_PROJECT_2_Page_2.png",
       "/_3157633_PROJECT_2_Page_3.png",
@@ -239,7 +242,7 @@ export const projects = {
     path: "/loveme",
     title: "Love Me",
     teaser: "Poster design project",
-    description: [],
+    description: ["A standalone poster design exploring the phrase ‘Love Me’ through a single graphic composition."],
     media: ["/loveme.png"],
   },
 };

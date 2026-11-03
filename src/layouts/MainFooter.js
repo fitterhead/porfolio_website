@@ -1,29 +1,16 @@
 import React from "react";
-import { Box, Toolbar, Typography } from "@mui/material";
 
 function MainFooter() {
   return (
-    <Box
-      sx={{
-        px: { xs: 2, md: 4 },
-        pb: { xs: 2, md: 3 },
-      }}
-    >
-      <Toolbar
-        disableGutters
-        sx={{
-          justifyContent: "space-between",
-          borderTop: "1px solid rgba(5, 2, 3, 0.1)",
-          pt: 2,
-          minHeight: "auto",
-        }}
-      >
-        <Typography variant="body1">
-          © {new Date().getFullYear()} Phi Nguyen. All Rights Reserved.
-        </Typography>
-      </Toolbar>
-    </Box>
+    <footer className="portfolio-footer">
+      <div className="contact-block">
+        <p className="eyebrow">Let’s work together</p>
+        <h2>Have a project in mind?</h2>
+        <a className="contact-email" href="mailto:xuanphiart@gmail.com">xuanphiart@gmail.com <span aria-hidden="true">↗</span></a>
+        <p>Tell me what you’re working on.</p>
+      </div>
+      <div className="footer-meta"><span>© {new Date().getFullYear()} Phi Nguyen</span><a href="/Phi Nguyen_Resume.pdf" target="_blank" rel="noopener noreferrer">View résumé (PDF) ↗</a></div>
+    </footer>
   );
 }
-
 export default MainFooter;

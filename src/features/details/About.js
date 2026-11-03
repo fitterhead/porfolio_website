@@ -12,33 +12,25 @@ const About = () => {
         <Grid item xs={12} md={6}>
           <img
             {...imageProps("/81631351_2811445118914931_1487271570295488512_n.jpg", "(max-width: 900px) 100vw, 600px")}
-            alt="Profile"
+            alt="Phi Nguyen"
             style={{ width: "100%", height: "auto" }}
           />
         </Grid>
 
         {/* Personal Information */}
         <Grid item xs={12} md={6}>
-          <Box p={2} bgcolor="#f5f5f5" borderRadius={4}>
+          <Box sx={{ px: { xs: 0, md: 3 }, pb: 5 }}>
             <Typography variant="h1" gutterBottom>
               Phi Nguyen
             </Typography>
-            <Typography variant="h3" paragraph>
-              I am Phi Nguyen, a dedicated designer and web developer, proudly
-              holding a degree from OCAD University. With a rich background in
-              design and coding, I possess a versatile skill set that bridges
-              the gap between creativity and technology. My design philosophy is
-              rooted in conceptual thinking, where I transform complex ideas
-              into visually compelling narratives. From 2D to 3D, editorial to
-              illustration, I leverage my expertise to create seamless digital
-              experiences. Additionally, proficient in CSS, HTML, React, and UX
-              design, I excel in crafting visually stunning and highly
-              functional websites. I collaborate with clients across multiple
-              countries. As an experienced branding designer, I work closely
-              with individuals and businesses to capture their essence and
-              translate it into compelling visual identities. Through my work, I
-              help clients express their visions clearly and confidently on a
-              global scale.
+            <Typography component="p" sx={{ fontFamily: "NeueMontreal-Book", fontSize: { xs: "1.125rem", md: "1.4rem" }, lineHeight: 1.6, mb: 3 }}>
+              I’m Phi Nguyen, a designer and web developer with a degree from OCAD University. My practice spans brand identity, editorial design, illustration and digital experiences.
+            </Typography>
+            <Typography component="p" sx={{ fontFamily: "NeueMontreal-Book", fontSize: "1.125rem", lineHeight: 1.7, mb: 3 }}>
+              I start with a concept and explore how it can take shape across different materials and formats—from a printed menu to a window graphic or an everyday object. I work with individuals and businesses across countries to turn their ideas into visual identities and useful applications.
+            </Typography>
+            <Typography component="p" sx={{ fontFamily: "NeueMontreal-Book", fontSize: "1.125rem", lineHeight: 1.7, mb: 3 }}>
+              Alongside my design practice, I build websites with HTML, CSS and React. Have a project in mind? I’d love to hear about it.
             </Typography>
             <Typography variant="body2">
               Email: <a href="mailto:xuanphiart@gmail.com">xuanphiart@gmail.com</a>

@@ -66,3 +66,20 @@ test("project navigation skips Curtain and provides visible links", () => {
   expect(screen.getByRole("link", { name: /Previous: Terroni LA/ }).getAttribute("href")).toBe("/terroni-la-window-screen");
   expect(screen.getAllByRole("link", { name: "All projects" }).length).toBe(2);
 });
+
+
+test("homepage separates selected projects from the archive and offers contact", () => {
+  open("/");
+  const selected = screen.getByRole("region", { name: "Selected work" });
+  expect(selected.querySelectorAll("a").length).toBe(8);
+  expect(selected.querySelector("a").getAttribute("href")).toBe("/terroni-la-window-screen");
+  expect(screen.getByRole("region", { name: "More work" }).querySelectorAll("a").length).toBe(8);
+  expect(screen.getByRole("link", { name: /xuanphiart@gmail.com/ }).getAttribute("href")).toBe("mailto:xuanphiart@gmail.com");
+});
+
+test("apron case study explains brief, decisions and production", () => {
+  open("/apron");
+  ["The brief", "Design decisions", "Sampling & production"].forEach((name) => {
+    expect(screen.getByRole("heading", { name, level: 2 })).toBeTruthy();
+  });
+});
