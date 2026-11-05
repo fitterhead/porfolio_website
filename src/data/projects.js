@@ -1,10 +1,12 @@
 export const projectOrder = [
-  "terronilawindow",
+  "enne",
+  "bombee",
   "summer2026",
-  "apron",
-  "totebag",
-  "tray",
   "summermenu2025",
+  "tray",
+  "totebag",
+  "terronilawindow",
+  "apron",
   "saigonzine",
   "fair",
   "rispa",
@@ -12,8 +14,6 @@ export const projectOrder = [
   "consumerism",
   "beyond",
   "okcomputer",
-  "enne",
-  "bombee",
   "loveme",
 ];
 

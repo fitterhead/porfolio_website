@@ -28,12 +28,18 @@ function HomePage() {
         },
       }}
     >
-      <Reveal delay={10}><Link className="project-card-link" to="/terroni-la-window-screen"><TerroniLAWindow preview /></Link></Reveal>
-      <Reveal delay={20}><Link className="project-card-link" to="/summer-2026"><Summer2026 preview /></Link></Reveal>
-      <Reveal delay={40}><Link className="project-card-link" to="/apron"><Apron preview /></Link></Reveal>
-      <Reveal delay={50}><Link className="project-card-link" to="/tote-bag"><ToteBag preview /></Link></Reveal>
+      <Reveal delay={10}>
+        <EnneHomestay />
+      </Reveal>
+      <Reveal delay={20}>
+        <BombeeHoney />
+      </Reveal>
+      <Reveal delay={40}><Link className="project-card-link" to="/summer-2026"><Summer2026 preview /></Link></Reveal>
+      <Reveal delay={50}><Link className="project-card-link" to="/summer-menu-2025"><SummerMenu2025 preview /></Link></Reveal>
       <Reveal delay={60}><Link className="project-card-link" to="/tray"><Tray preview /></Link></Reveal>
-      <Reveal delay={70}><Link className="project-card-link" to="/summer-menu-2025"><SummerMenu2025 preview /></Link></Reveal>
+      <Reveal delay={70}><Link className="project-card-link" to="/tote-bag"><ToteBag preview /></Link></Reveal>
+      <Reveal delay={80}><Link className="project-card-link" to="/terroni-la-window-screen"><TerroniLAWindow preview /></Link></Reveal>
+      <Reveal delay={90}><Link className="project-card-link" to="/apron"><Apron preview /></Link></Reveal>
       <Reveal delay={20}>
         <SaigonZine />
       </Reveal>
@@ -48,12 +54,6 @@ function HomePage() {
       </Reveal>
       <Reveal delay={100}>
         <Misc1 />
-      </Reveal>
-      <Reveal delay={120}>
-        <EnneHomestay />
-      </Reveal>
-      <Reveal delay={140}>
-        <BombeeHoney />
       </Reveal>
       <Reveal delay={160}>
         <LoveMePoster />

@@ -62,7 +62,7 @@ test("Curtain stays unpublished across homepage, menu and direct route", () => {
 
 test("project navigation skips Curtain and provides visible links", () => {
   open("/summer-2026");
-  expect(screen.getByRole("link", { name: /Next: Terroni & Sud Forno/ }).getAttribute("href")).toBe("/apron");
-  expect(screen.getByRole("link", { name: /Previous: Terroni LA/ }).getAttribute("href")).toBe("/terroni-la-window-screen");
+  expect(screen.getByRole("link", { name: /Next: Terroni Summer Menu 2025/ }).getAttribute("href")).toBe("/summer-menu-2025");
+  expect(screen.getByRole("link", { name: /Previous: Bombee Honey/ }).getAttribute("href")).toBe("/bombee");
   expect(screen.getAllByRole("link", { name: "All projects" }).length).toBe(2);
 });
