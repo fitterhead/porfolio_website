@@ -1,5 +1,6 @@
 export const projectOrder = [
   "terronicoffee",
+  "spacciococktails",
   "enne",
   "bombee",
   "summer2026",
@@ -19,7 +20,66 @@ export const projectOrder = [
 ];
 
 export const projects = {
+  spacciococktails: {
+    "path": "/spaccio-canned-cocktails",
+    "title": "Spaccio — Canned Cocktails Packaging",
+    "year": 2026,
+    "teaser": "Packaging design and print production for Spaccio’s ready-to-drink cocktails",
+    "description": [
+        "Packaging design for Spaccio’s ready-to-drink cocktail collection, featuring three variations: Campari Spritz, Bordiga Spritz and Vodka Limonata.",
+        "Under the creative direction and supervision of Andrew Di Rosa, I continued developing the existing label designs, refining the typography, colour palette and layout across all three variations. The project also involved adapting the packaging to Terroni’s updated branding while maintaining a consistent visual identity throughout the collection.",
+        "My role included exploring stronger colour combinations, refining the ingredient hierarchy and organising product information, including alcohol content, volume and UPC codes. I also developed the back labels, incorporating updated brand messaging, location details and recycling information within a clear, balanced layout.",
+        "For production, I prepared the final print-ready artwork and worked directly with Lorpon Labels to review proofs, adjust barcode dimensions, confirm label specifications and coordinate printing. The process balanced visual design with technical requirements to bring the packaging into production."
+    ],
+    "disciplines": [
+        "Packaging Design",
+        "Label Design",
+        "Typography",
+        "Colour Development",
+        "Print Production",
+        "Prepress",
+        "Supplier Coordination"
+    ],
+    "media": [
+        "/spaccio-canned-cocktails/1.png",
+        "/spaccio-canned-cocktails/2.png",
+        "/spaccio-canned-cocktails/3.png",
+        "/spaccio-canned-cocktails/4.png",
+        "/spaccio-canned-cocktails/5-label-explorations.png",
+        "/spaccio-canned-cocktails/6-back-label-explorations.png",
+        "/spaccio-canned-cocktails/7-colour-explorations.png",
+        "/spaccio-canned-cocktails/8.png"
+    ],
+    "captions": {
+        "/spaccio-canned-cocktails/5-label-explorations.png": "Label explorations",
+        "/spaccio-canned-cocktails/6-back-label-explorations.png": "Back label explorations",
+        "/spaccio-canned-cocktails/7-colour-explorations.png": "Colour explorations"
+    },
+    "credits": [
+        [
+            "Client",
+            "Spaccio / Terroni Group"
+        ],
+        [
+            "Creative Direction",
+            "Andrew Di Rosa"
+        ],
+        [
+            "Initial Label Development",
+            "Diego de la Torre"
+        ],
+        [
+            "Design Adaptation & Production",
+            "Phil Nguyen"
+        ],
+        [
+            "Printing & Manufacturing",
+            "Lorpon Labels"
+        ]
+    ]
+},
   terronicoffee: {
+    year: 2026,
     path: "/terroni-coffee-bag-340g",
     title: "Terroni Coffee Bag — 340g",
     teaser: "Packaging development and print production for Terroni’s coffee collection",
@@ -54,6 +114,7 @@ export const projects = {
     ],
   },
   summermenu2025: {
+    year: 2025,
     path: "/summer-menu-2025",
     title: "Terroni Summer Menu 2025",
     teaser: "Seasonal menu design for Terroni, 2025",
@@ -64,6 +125,7 @@ export const projects = {
     media: ["/menu2025/2025Menu-1.png", "/menu2025/2025Menu-2.png", "/menu2025/2025Menu-3.png", "/menu2025/2025Menu-4.png", "/menu2025/2025Menu-5.png", "/menu2025/2025Menu-6.png"],
   },
   summer2026: {
+    year: 2026,
     path: "/summer-2026",
     title: "Terroni Spring/Summer Menu 2026",
     teaser: "Spring/summer menu design for Terroni, 2026",
@@ -74,6 +136,7 @@ export const projects = {
     media: ["/menu2026/2026Menu-1.png", "/menu2026/2026Menu-2.png", "/menu2026/2026Menu-3.png", "/menu2026/2026Menu-4.png", "/menu2026/2026Menu-5.png", "/menu2026/2026Menu-6.png", "/menu2026/2026Menu-7.png"],
   },
   terronilawindow: {
+    year: 2026,
     path: "/terroni-la-window-screen",
     title: "Terroni LA — Window Screens",
     teaser: "Window graphics for Terroni in Los Angeles, 2026",
@@ -85,6 +148,7 @@ export const projects = {
     media: ["/WindowScreen/terLAwindowScreen.png", "/WindowScreen/terLAwindowScreen-2.png", "/WindowScreen/terLAwindowScreen-3.png", "/WindowScreen/terLAwindowScreen-4.png"],
   },
   apron: {
+    year: 2025,
     path: "/apron",
     title: "Terroni & Sud Forno — Aprons",
     teaser: "Apron design for Terroni and Sud Forno, 2025",
@@ -96,6 +160,7 @@ export const projects = {
     media: ["/Apron/20260102-_Apron8440.jpg", "/Apron/20260102-_Apron8443.jpg", "/Apron/20260102-_Apron8487.jpg", "/Apron/20260102-_Apron8491.jpg", "/Apron/20260102-_Apron8501.jpg", "/Apron/20260102-_Apron8518.jpg", "/Apron/20260102-_Apron8530.jpg", "/Apron/20260102-_Apron8545.jpg"],
   },
   totebag: {
+    year: 2025,
     path: "/tote-bag",
     title: "Terroni — Tote Bags",
     teaser: "Tote bag design for Terroni, 2025",
@@ -107,6 +172,7 @@ export const projects = {
     media: ["/ToteBag/20260102-_totebag8549.jpg", "/ToteBag/20260102-_totebag8551.jpg", "/ToteBag/20260102-_totebag8569.jpg", "/ToteBag/20260102-_totebag8571.jpg", "/ToteBag/20260102-_totebag8576.jpg", "/ToteBag/20260102-_totebag8579.jpg", "/ToteBag/20260102-_totebag8587.jpg", "/ToteBag/20260102-_totebag8592.jpg"],
   },
   tray: {
+    year: 2025,
     path: "/tray",
     title: "Forno Terroni LA — Serving Trays",
     teaser: "Serving tray design for Forno Terroni LA, 2025",
@@ -127,6 +193,7 @@ export const projects = {
     media: ["/placeholders/full.svg", "/placeholders/detail-a.svg", "/placeholders/detail-b.svg"],
   },
   saigonzine: {
+    year: 2023,
     path: "/saigonzine",
     title: "The Un-Michelin Guide to Saigon food destinations",
     teaser: "A zine about HCMC best hidden street foods, 2023",
@@ -151,6 +218,7 @@ export const projects = {
     ],
   },
   fair: {
+    year: 2023,
     path: "/fair",
     title: "Vietnam Typical Good Fair 2023 Poster",
     teaser: "Poster series for Vietnam Typical Goods Fair, 2023",
@@ -161,6 +229,7 @@ export const projects = {
     media: ["/fair.png", "/Frame 13.png", "/12215.jpg", "/02-poster-and-billboard-mockups.jpg"],
   },
   rispa: {
+    year: 2021,
     path: "/rispa",
     title: "Ri Beauty Spa",
     teaser: "Branding design for a spa in Tokyo, 2021",
@@ -180,6 +249,7 @@ export const projects = {
     ],
   },
   top100: {
+    year: 2023,
     path: "/top100",
     title: "Top 100",
     teaser: "Editorial and graphic exploration for Top 100",
@@ -191,6 +261,7 @@ export const projects = {
     ],
   },
   consumerism: {
+    year: 2020,
     path: "/consumerism",
     title: "Solitanianian-ism",
     teaser: "A conceptual project about consumerism, 2020",
@@ -213,6 +284,7 @@ export const projects = {
     ],
   },
   beyond: {
+    year: 2021,
     path: "/beyond",
     title: "Beyond The Frame",
     teaser: "Motion project for a gallery podcast, 2021",
@@ -222,6 +294,7 @@ export const projects = {
     media: ["/Frame 15.png", "/Frame 31.png"],
   },
   okcomputer: {
+    year: 2019,
     path: "/okcomputer",
     title: "OK Computer",
     teaser: "Redesign of Radiohead's album OK Computer, 2019",
@@ -236,6 +309,7 @@ export const projects = {
     ],
   },
   enne: {
+    year: 2021,
     path: "/enne",
     title: "Enne Homestay",
     teaser: "Brand identity for a guest house in Da Lat",
@@ -255,6 +329,7 @@ export const projects = {
     ],
   },
   bombee: {
+    year: 2022,
     path: "/bombee",
     title: "Bombee Honey",
     teaser: "Identity design for an upcoming honey brand in Japan",
@@ -271,6 +346,7 @@ export const projects = {
     ],
   },
   loveme: {
+    year: 2017,
     path: "/loveme",
     title: "Love Me",
     teaser: "Poster design project",

@@ -30,6 +30,7 @@ function HomePage() {
       }}
     >
       <Reveal><TerroniCoffee /></Reveal>
+      <Reveal delay={10}><TerroniCoffee projectKey="spacciococktails" /></Reveal>
       <Reveal delay={10}>
         <EnneHomestay />
       </Reveal>

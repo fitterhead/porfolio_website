@@ -57,6 +57,7 @@ function ProjectDetailPage({ projectKey }) {
           >
             <Button component={Link} to="/" startIcon={<ArrowBackRoundedIcon />} sx={{ color: "#050203" }}>All projects</Button>
             <Typography variant="h1">{project.title}</Typography>
+            {project.year && <Typography component="p" variant="h3"><time dateTime={String(project.year)}>{project.year}</time></Typography>}
             {project.description.map((paragraph) => (
               <Typography component="p" key={paragraph} variant="h2" sx={{ maxWidth: "1100px" }}>
                 {paragraph}
