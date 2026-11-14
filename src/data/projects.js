@@ -1,4 +1,5 @@
 export const projectOrder = [
+  "terronicoffee",
   "enne",
   "bombee",
   "summer2026",
@@ -18,6 +19,38 @@ export const projectOrder = [
 ];
 
 export const projects = {
+  terronicoffee: {
+    path: "/terroni-coffee-bag-340g",
+    title: "Terroni Coffee Bag — 340g",
+    teaser: "Packaging development and print production for Terroni’s coffee collection",
+    description: [
+      "Packaging for Terroni’s 340g coffee collection, created in collaboration with Propeller Coffee Co.",
+      "Under the creative direction and supervision of Andrew Di Rosa, I developed and adapted the packaging from the original visual concept by Diego de la Torre. My role focused on refining the layout, typography and colour palette while maintaining consistency with Terroni’s visual identity.",
+      "Colour development and print testing were central to the project. Working closely with Rootree, I explored colour combinations and metallic finishes through multiple printed samples and tear sheets. These tests informed the final colour selection and clarified how the digital artwork would translate to the finished packaging.",
+      "I prepared print-ready artwork, adjusted dielines, reviewed technical specifications and coordinated with the supplier throughout proofing and production. Once the finished bags arrived, I assessed print quality against the approved proofs and followed up on colour inconsistencies to improve accuracy in future production runs.",
+    ],
+    disciplines: ["Packaging Design", "Graphic Design", "Colour Development", "Print Production", "Prepress", "Supplier Coordination"],
+    media: [
+      "/terroni-coffee-bag-340g/1.jpg",
+      "/terroni-coffee-bag-340g/2.jpg",
+      "/terroni-coffee-bag-340g/3.jpg",
+      "/terroni-coffee-bag-340g/4.png",
+      "/terroni-coffee-bag-340g/5.png",
+      "/terroni-coffee-bag-340g/6-graphic-and-label-explorations.png",
+      "/terroni-coffee-bag-340g/17-print-proofs.png",
+    ],
+    captions: {
+      "/terroni-coffee-bag-340g/6-graphic-and-label-explorations.png": "Graphic and label explorations",
+      "/terroni-coffee-bag-340g/17-print-proofs.png": "Print proofs",
+    },
+    credits: [
+      ["Client", "Terroni / Propeller Coffee Co."],
+      ["Creative Direction", "Andrew Di Rosa"],
+      ["Original Visual Concept", "Diego de la Torre"],
+      ["Packaging Development & Production", "Phil Nguyen"],
+      ["Printing & Manufacturing", "Rootree"],
+    ],
+  },
   summermenu2025: {
     path: "/summer-menu-2025",
     title: "Terroni Summer Menu 2025",

@@ -49,7 +49,7 @@ const About = () => {
             <Button
               variant="text"
               component="a"
-              href="/Phi Nguyen_Resume.pdf"
+              href="/Phi_Resume_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               sx={{

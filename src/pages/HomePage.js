@@ -16,6 +16,7 @@ import TerroniLAWindow from "../features/pages/TerroniLAWindow";
 import Apron from "../features/pages/Apron";
 import ToteBag from "../features/pages/ToteBag";
 import Tray from "../features/pages/Tray";
+import TerroniCoffee from "../features/pages/TerroniCoffee";
 
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function HomePage() {
         },
       }}
     >
+      <Reveal><TerroniCoffee /></Reveal>
       <Reveal delay={10}>
         <EnneHomestay />
       </Reveal>
