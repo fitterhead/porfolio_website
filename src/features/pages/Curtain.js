@@ -16,7 +16,8 @@ function Curtain() {
       style={{
         backgroundImage: "url('/placeholders/full.svg')",
         backgroundPosition: "center",
-        backgroundSize: "100%",
+        backgroundSize: "contain",
+        maxHeight: "var(--project-image-max-height)",
         backgroundRepeat: "no-repeat",
         display: "flex",
         flexDirection: "column",

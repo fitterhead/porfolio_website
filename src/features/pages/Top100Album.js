@@ -21,7 +21,8 @@ function Top100Album() {
       {...cover}
       style={{
         backgroundPosition: "center",
-        backgroundSize: "100%",
+        backgroundSize: "contain",
+        maxHeight: "var(--project-image-max-height)",
         backgroundRepeat: "no-repeat",
         display: "flex",
         flexDirection: "column",

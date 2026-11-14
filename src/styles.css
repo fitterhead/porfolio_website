@@ -188,3 +188,16 @@ a:focus-visible, button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .project-edge-label { transition: none; }
 }
+
+/* Reserve space for the sticky header and breathing room around each image. */
+:root {
+  --project-image-max-height: max(1px, calc(100vh - 140px));
+}
+@supports (height: 100svh) {
+  :root { --project-image-max-height: max(1px, calc(100svh - 140px)); }
+}
+.project-image {
+  max-height: var(--project-image-max-height);
+  object-fit: contain;
+  object-position: center;
+}

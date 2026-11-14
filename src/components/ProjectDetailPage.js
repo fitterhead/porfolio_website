@@ -79,6 +79,7 @@ function ProjectDetailPage({ projectKey }) {
                 <Box component="figure" key={image} sx={{ m: 0, minWidth: 0 }}>
                 <Box
                   component="img"
+                  className="project-image"
                   {...imageProps(image, group.length === 2 ? "(max-width: 900px) 100vw, (max-width: 1536px) 50vw, 768px" : undefined)}
                   alt={`${project.title} preview ${project.media.indexOf(image) + 1}`}
                   loading={groupIndex === 0 ? "eager" : "lazy"}

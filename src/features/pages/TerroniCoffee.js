@@ -11,7 +11,7 @@ export default function TerroniCoffee({ projectKey = "terronicoffee" }) {
       display: "block", position: "relative",
       "&:hover .coffee-title, &:focus-visible .coffee-title": { opacity: 1, filter: "blur(0)" },
     }}>
-      <Box component="img" {...imageProps(project.media[0])} alt={project.title}
+      <Box component="img" className="project-image" {...imageProps(project.media[0])} alt={project.title}
         fetchPriority={projectKey === "terronicoffee" ? "high" : "auto"} loading={projectKey === "terronicoffee" ? "eager" : "lazy"} sx={{ display: "block", width: "100%", height: "auto" }} />
       <Typography className="coffee-title" variant="h1" component="h2" sx={{
         position: "absolute", bottom: 0, left: 0, right: 0, p: 2, textAlign: "center",

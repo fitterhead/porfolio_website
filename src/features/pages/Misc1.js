@@ -41,12 +41,13 @@ const Misc1 = () => {
         >
           <CardMedia
             component="img"
+            className="project-image"
             alt="Card Image"
 
             {...imageProps("/Frame 14.png")}
             loading="lazy"
             decoding="async"
-            style={{ objectFit: "cover", width: "100%", height: "auto" }}
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{
@@ -97,12 +98,13 @@ const Misc1 = () => {
         >
           <CardMedia
             component="img"
+            className="project-image"
             alt="Card Image"
 
             {...imageProps("/Frame 15.png")}
             loading="lazy"
             decoding="async"
-            style={{ objectFit: "cover", width: "100%", height: "auto" }}
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{
@@ -152,12 +154,13 @@ const Misc1 = () => {
         >
           <CardMedia
             component="img"
+            className="project-image"
             alt="Card Image"
 
             {...imageProps("/Frame 16.png")}
             loading="lazy"
             decoding="async"
-            style={{ objectFit: "cover", width: "100%", height: "auto" }}
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
           />
           <CardContent
             style={{
