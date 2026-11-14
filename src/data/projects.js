@@ -29,7 +29,8 @@ export const projects = {
         "Packaging design for Spaccio’s ready-to-drink cocktail collection, featuring three variations: Campari Spritz, Bordiga Spritz and Vodka Limonata.",
         "Under the creative direction and supervision of Andrew Di Rosa, I continued developing the existing label designs, refining the typography, colour palette and layout across all three variations. The project also involved adapting the packaging to Terroni’s updated branding while maintaining a consistent visual identity throughout the collection.",
         "My role included exploring stronger colour combinations, refining the ingredient hierarchy and organising product information, including alcohol content, volume and UPC codes. I also developed the back labels, incorporating updated brand messaging, location details and recycling information within a clear, balanced layout.",
-        "For production, I prepared the final print-ready artwork and worked directly with Lorpon Labels to review proofs, adjust barcode dimensions, confirm label specifications and coordinate printing. The process balanced visual design with technical requirements to bring the packaging into production."
+        "For production, I prepared the final print-ready artwork and worked directly with Lorpon Labels to review proofs, adjust barcode dimensions, confirm label specifications and coordinate printing. The process balanced visual design with technical requirements to bring the packaging into production.",
+      "During proofing, I refined the UPC colour and dimensions to address the printer’s requirements while preserving the balance of the back-label layout. I supplied revised dieline artwork and reviewed the updated proofs before production proceeded.",
     ],
     "disciplines": [
         "Packaging Design",
@@ -121,6 +122,7 @@ export const projects = {
     description: [
       "A summer menu design for Terroni, created in 2025 to present its seasonal food and drink offerings.",
       "Inspired by summer produce, the menu combines fruit and vegetable illustrations with fresh, cool colours, evoking a walk through a sunlit forest. Each layout was hand-drawn in Procreate, then converted into vector artwork.",
+      "Italian cover phrases connect the illustrations to everyday summer pleasures, from bread and tomatoes to sea air, melon and late-night swims. The combination of words and imagery gives the seasonal series a shared tone while allowing each cover to express a different moment.",
     ],
     media: ["/menu2025/2025Menu-1.png", "/menu2025/2025Menu-2.png", "/menu2025/2025Menu-3.png", "/menu2025/2025Menu-4.png", "/menu2025/2025Menu-5.png", "/menu2025/2025Menu-6.png"],
   },
@@ -132,6 +134,8 @@ export const projects = {
     description: [
       "A spring/summer menu design for Terroni, created for the 2026 season.",
       "Inspired by Gio Ponti’s Parco dei Principi hotel in Sorrento, the covers explore imaginary architecture and coastal views. The scenes were built in 3D, with shadows and reflections on separate layers, then converted into bitmap images and recoloured digitally to capture the feeling of an Italian summer.",
+      "Beyond the cover artwork, I coordinated revisions to the general Terroni and Sterling menus, working through content and pricing updates with the restaurant team before sign-off. The print handoff included six cover variations for the general menu and four for Sterling.",
+      "I prepared production files and accompanying instructions for Colour Innovations, resolved font compatibility questions and followed up through printing and bindery. I also coordinated the location-specific quantities and distribution requirements for the rollout.",
     ],
     media: ["/menu2026/2026Menu-1.png", "/menu2026/2026Menu-2.png", "/menu2026/2026Menu-3.png", "/menu2026/2026Menu-4.png", "/menu2026/2026Menu-5.png", "/menu2026/2026Menu-6.png", "/menu2026/2026Menu-7.png"],
   },
@@ -144,6 +148,8 @@ export const projects = {
       "Window graphics for Terroni in Los Angeles, designed to make the restaurant easily recognisable from the street while keeping the visuals subtle and understated.",
       "Inspired by wheat fields, linen and old pasta packaging, the screens combine linear patterns with geometric lettering. Printed directly onto frosted vinyl, the graphics bring pattern and lettering into the restaurant’s windows.",
       "I coordinated with the measuring, printing and installation teams in LA to fit each window, keep the spacing consistent and make sure the correct strips were removed during installation.",
+      "I prepared scaled production artwork, window-by-window mockups and an installation guide for LA Sign Factory. Following the site measurements, I revised the dimensions and specified how graphics should be centred or trimmed evenly to preserve the lettering.",
+      "The production handoff also included a colour reference selected from the printed sample. I followed up through installation and reviewed photographs of the completed graphics with the supplier.",
     ],
     media: ["/WindowScreen/terLAwindowScreen.png", "/WindowScreen/terLAwindowScreen-2.png", "/WindowScreen/terLAwindowScreen-3.png", "/WindowScreen/terLAwindowScreen-4.png"],
   },
@@ -155,7 +161,8 @@ export const projects = {
     description: [
       "A branded apron collection for Terroni and Sud Forno, created in 2025 for staff to wear during daily service.",
       "Inspired by Italian suits, the design uses front pockets and a slim waist to bring together tailoring and workwear. Shoulder buckles make adjustment easier, addressing the uneven fit of the previous aprons. The shorter version has extra pockets for the tools staff carry during service.",
-      "The collection includes long and short styles, with variations in fabric colour and branded patches. Pocket construction and patch placement were refined through sample reviews before production.",
+      "The collection includes long and short styles, with variations in fabric colour and branded patches. I worked directly with ChangRong on pre-production samples, reviewing pocket dimensions, chest-pocket placement and patch positioning against the design specifications.",
+      "Following the sample reviews, I clarified the required adjustments with the manufacturer and confirmed the details before bulk production. My role also extended to coordinating the rollout for the Toronto and Los Angeles teams.",
     ],
     media: ["/Apron/20260102-_Apron8440.jpg", "/Apron/20260102-_Apron8443.jpg", "/Apron/20260102-_Apron8487.jpg", "/Apron/20260102-_Apron8491.jpg", "/Apron/20260102-_Apron8501.jpg", "/Apron/20260102-_Apron8518.jpg", "/Apron/20260102-_Apron8530.jpg", "/Apron/20260102-_Apron8545.jpg"],
   },
@@ -168,6 +175,8 @@ export const projects = {
       "A tote bag design for Terroni, created in 2025 as reusable merchandise for customers.",
       "The aim was to create a tote that feels generous and distinctive—equally suited to grocery shopping and a day out. Larger proportions and heavyweight 540 gsm canvas give the bag a substantial feel, with durability at the centre of the design.",
       "Five bag colours are paired with different graphics, each printed in a single colour. One side carries a saying; the other names ingredients used at Terroni in Italian, inviting curiosity.",
+      "I coordinated with ChangRong through sampling, production and delivery, translating the studio’s feedback into manufacturing instructions. This included refining the packing method so folds would sit below the printed graphics, helping avoid creases across the artwork.",
+      "After delivery, I checked the received quantities against the order and followed up with the supplier to reconcile the shipment. This extended my role from the design itself to the presentation and handover of the finished bags.",
     ],
     media: ["/ToteBag/20260102-_totebag8549.jpg", "/ToteBag/20260102-_totebag8551.jpg", "/ToteBag/20260102-_totebag8569.jpg", "/ToteBag/20260102-_totebag8571.jpg", "/ToteBag/20260102-_totebag8576.jpg", "/ToteBag/20260102-_totebag8579.jpg", "/ToteBag/20260102-_totebag8587.jpg", "/ToteBag/20260102-_totebag8592.jpg"],
   },
@@ -179,6 +188,8 @@ export const projects = {
     description: [
       "A collection of serving trays for Forno Terroni LA, developed in 2025.",
       "Produced with Formpress in Sweden, the collection carries the studio’s graphics onto birch-veneer trays. Artwork and colour adjustments were developed around the material and printing process.",
+      "I adapted the artwork to Formpress’s digital moulds for two tray sizes and prepared separate target-colour and adjusted-colour files. This addressed the tendency for colours to appear darker once printed and finished on the tray material.",
+      "Working directly with the manufacturer, I clarified CMYK printing requirements, reviewed proofs and revised the production files. The process translated the studio’s colour intentions into practical specifications for birch-veneer production.",
     ],
     media: ["/tray/Tray1.png", "/tray/Tray2.png", "/tray/Tray3.png", "/tray/Tray4.png", "/tray/Tray5.png", "/tray/Tray6.png"],
   },
@@ -237,6 +248,7 @@ export const projects = {
       "Ri Beauty Spa is a Japanese beauty salon in Kawasaki City founded by a Vietnamese immigrant entrepreneur. The brand was created to feel welcoming, practical, and accessible for both Japanese customers and working-class immigrant women.",
       "During the naming stage, I researched competitors and noticed many salons relied on foreign words that were difficult to pronounce. I recommended a name that is easy to read, remember, and share through word of mouth.",
       "That strategy shaped a clearer identity with stronger everyday usability while keeping the salon warm and distinctive.",
+      "The identity was extended into practical customer touchpoints, including door signage and a membership stamp card. These applications carried the brand into the salon’s physical space and repeat-visit experience.",
     ],
     media: [
       "/RiSpa.png",
@@ -290,6 +302,8 @@ export const projects = {
     teaser: "Motion project for a gallery podcast, 2021",
     description: [
       "Beyond the Frame is a visual identity for a podcast program from Propeller Gallery, created in collaboration with artist Doris Purchase.",
+      "I developed an animated version of the podcast identity and worked with the gallery team to prepare it for video use. This included coordinating revisions alongside the sound-effects edit and adjusting the closing hold to suit the final sequence.",
+      "The handoff involved updating the on-screen credit treatment and supplying revised animation files, helping the identity work consistently across the podcast’s visual and video presentation.",
     ],
     media: ["/Frame 15.png", "/Frame 31.png"],
   },
