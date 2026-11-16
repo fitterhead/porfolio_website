@@ -18,7 +18,7 @@ const Misc1 = () => {
   return (
     <Grid
       container
-      spacing={2}
+      spacing={0}
       style={{ height: "fit-content", backgroundColor: "#7CE02E" }}
     >
       <Grid item md={6} xs={12}>

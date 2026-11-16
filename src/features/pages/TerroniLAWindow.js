@@ -9,7 +9,7 @@ function TerroniLAWindow() {
 
   const handleProject = () => navigate("/terroni-la-window-screen");
 
-  const cover = useBackgroundImage("/WindowScreen/terLAwindowScreen.png", true);
+  const cover = useBackgroundImage("/WindowScreen/terLAwindowScreen.png", false);
 
   return (
     <Grid

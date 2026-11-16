@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import manifest from "../data/image-manifest.json";
 
-// Serve original artwork without lossy compression or resolution limits.
-export function imageProps(source) {
+// Serve responsive copies capped at the reference photo's 2530 × 1590 bounds.
+export function imageProps(source, sizes = "(max-width: 1536px) 100vw, 1536px") {
   const image = manifest[source];
-  if (!image) return { src: source };
+  if (!image?.variants?.length) return { src: source };
   return {
-    src: source,
+    src: image.variants[image.variants.length - 1].src,
+    srcSet: image.variants.map((variant) => `${variant.src} ${variant.width}w`).join(", "),
+    sizes,
     width: image.width,
     height: image.height,
   };
@@ -18,7 +20,14 @@ export function imageRatio(source) {
 }
 
 export function backgroundImage(source) {
-  return { backgroundImage: `url('${source}')` };
+  const variants = manifest[source]?.variants;
+  if (!variants?.length) return { backgroundImage: `url('${source}')` };
+  return {
+    backgroundImage: `url('${variants[variants.length - 1].src}')`,
+    "@media (max-width: 600px)": {
+      backgroundImage: `url('${variants.find((variant) => variant.width >= 1280)?.src || variants[variants.length - 1].src}')`,
+    },
+  };
 }
 
 // Defer homepage background downloads until a card approaches the viewport.
@@ -36,5 +45,9 @@ export function useBackgroundImage(source, eager = false) {
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, [ready]);
-  return { ref, sx: ready ? backgroundImage(source) : {} };
+  return {
+    ref,
+    className: "project-background-image",
+    sx: { mx: "auto", ...(ready ? backgroundImage(source) : {}) },
+  };
 }

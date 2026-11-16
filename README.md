@@ -75,8 +75,8 @@ The site serves responsive WebP copies from `public/optimized/`; original images
 are retained for future edits. The generated mapping in
 `src/data/image-manifest.json` includes dimensions to keep gallery layouts stable.
 Homepage covers download as they approach the viewport; the first cover loads
-immediately. Gallery images use `srcset` with 640/1280/2400 px widths (without
-upscaling), quality 90, and sRGB conversion for embedded colour profiles.
+immediately. Gallery images use `srcset` with 640/1280/2530 px widths, capped within 2530 × 1590 px (without
+cropping or upscaling), quality 90, and sRGB conversion for embedded colour profiles.
 
 To regenerate after adding or replacing an original image, install Pillow in a
 Python virtual environment and run `python scripts/optimize-images.py`. Commit the
